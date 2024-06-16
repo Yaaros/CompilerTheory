@@ -1,0 +1,22 @@
+{
+     int x;
+     int y;
+     int i;
+     read x;
+     y = 0;
+     if (x > 10) {
+         y = 20;
+     } else {
+         y = 30;
+     }
+     while (y < 5) {
+         y = y + 1;
+         y = y + 2;
+     }
+     for (i=1;i<4;i=i+1){
+         x = x + 1;
+         y = y + 2;
+     }
+     write x;
+     write y;
+}

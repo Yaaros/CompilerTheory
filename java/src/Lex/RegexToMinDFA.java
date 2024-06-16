@@ -12,6 +12,8 @@ public class RegexToMinDFA {
     StateGraph NFA;
     StateGraph DFA;
     StateGraph minDFA;
+
+    LexTree tree;
     public RegexToMinDFA(String regex) {
         RegexToNFA(regex);
         NFAToDFA();
@@ -26,12 +28,23 @@ public class RegexToMinDFA {
         return minDFA;
     }
 
+    public void printTree() {
+        System.out.println("前序序列:");
+        tree.preOrder();
+        System.out.println("中序序列:");
+        tree.inOrder();
+    }
+
+    public LexTree getTree(){
+        return tree;
+    }
+
     public StateGraph getNFA() {
         return NFA;
     }
     public void RegexToNFA(String regex){
-        LexTree t = new LexTree(regex);
-        NFA = t.postOrder();
+        tree = new LexTree(regex);
+        NFA = tree.postOrder();
         System.out.println("NFA=\n"+NFA);
     }
     public void NFAToDFA(){

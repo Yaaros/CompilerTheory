@@ -46,5 +46,6 @@ public class RegexTest {
     @Test
     public void test5_NFAToDFATest2(){
         RegexToMinDFA dfa = new RegexToMinDFA("ba|(a|bb)a*b");
+        dfa.printTree();
     }
 }

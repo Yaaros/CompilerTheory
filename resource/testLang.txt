@@ -1,0 +1,11 @@
+{
+    int x;
+    int y;
+    int i;
+    x = 1;
+    read y;
+    for(i=1;i<=y;i=i+1){
+        x = x*i;
+    }
+    write x;
+}

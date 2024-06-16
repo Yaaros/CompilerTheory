@@ -103,6 +103,7 @@ public class LexTree {
     }
 
     private Node read(String[] arr,int start,int end) {
+        if(arr.length==1||arr.length==0)return null;
         Deque<Node> stack = new LinkedList<>();
         Node curr;
         for (int i = start; i < end; i++) {
@@ -165,7 +166,7 @@ public class LexTree {
         return false;
     }
 
-    private static class Node{
+    protected static class Node{
         String symbol;
         Node left;
         Node right;

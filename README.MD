@@ -43,5 +43,54 @@ TEST 语言的单词符号有：
 <comment first>-> /* 
 <commentlast>-> */
 
+## 结果
+运行java/src/Lex/test下的LexTest.java
 # 作业2
 实现词法分析器
+## 结果
+运行java/src/Lex/test下的RegexTest.java
+# 作业3
+语法分析1：自顶向上的语法分析
+在这个pdf中，}是终结符，\[]是一种标记，表示”可选“
+规则13要多读一位
+## 结果
+运行java/src/Syntac/test/UnitTest.java的test_problem1~3
+# 作业4
+实现LL语法分析
+这个最为复杂，构造FIRST集合、构造FOLLOW集合、构造分析决策表
+然后再进行LL分析
+## 结果
+运行java/src/Syntac/test/UnitTest.java的test_problem4~5
+## 关于语法分析
+关于我的Blocks链的说明：
+如果一个if里面有很多句话，也有else分支，那么：
+if(bool_expr){
+    stat1;
+    stat2;
+}
+else{
+    stat3;
+    stat4;
+}
+会转化成：
+<if_stat>
+    <bool_expr>
+    <compound_list>
+        <stat_list>
+            <stat1>
+            <stat2>
+    <compound_list>
+        <stat_list>
+            <stat3>
+            <stat4>
+# 作业5
+实现将语法树转化为栈式抽象汇编语言的程序
+## 结果
+运行java/src/Semantic/AsmSpawner.java
+
+# 作业 6
+实现能够运行栈式汇编语言的程序
+
+## 结果
+运行java/src/Semantic/AsmRunner.java
+或者直接运行java/src/Main.java
