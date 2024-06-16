@@ -94,3 +94,6 @@ else{
 ## 结果
 运行java/src/Semantic/AsmRunner.java
 或者直接运行java/src/Main.java
+
+# 总结
+2500行代码，菜的不行
